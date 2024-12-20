@@ -7,7 +7,7 @@ name = "adventio"
 version = "0.1.0"
 
 [[package]]
-name = "day_02"
+name = "day_01_a"
 version = "0.1.0"
 dependencies = [
  "adventio",
