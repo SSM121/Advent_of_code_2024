@@ -2,7 +2,6 @@ use adventio;
 
 fn main() {
     let (list1, list2) = adventio::read_inputs("../input.txt".to_string());
-//    let (list1, list2) = adventio::read_inputs("test.txt".to_string());
     let sims = get_similarities(list1, list2);
     let sum: isize  = sims.iter().sum();
     println!("{sum}");
@@ -25,3 +24,14 @@ fn get_similarities(list1: Vec<isize>, list2: Vec<isize>)-> Vec<isize>{
     similarities
 }
 
+
+#[cfg(test)]
+mod tests{
+    use super::*;
+    #[test]
+    fn works(){
+        let (list1, list2) = adventio::read_inputs("test.txt".to_string());
+        let result: isize = get_similarities(list1, list2).iter().sum();
+        assert_eq!(result, 31);
+    }
+}
