@@ -14,3 +14,16 @@ pub fn read_inputs_day_01(filename: String) -> (Vec<isize>, Vec<isize>){
     }
     (list1, list2)
 }
+
+#[cfg(test)]
+mod tests{
+    use super::*;
+    #[test]
+    fn day01(){
+        let (list1, list2) = read_inputs_day_01("test1.txt".to_string());
+        let goal1 = vec![3, 4, 2, 1, 3, 3,];
+        let goal2 = vec![4, 3, 5, 3, 9, 3,];
+        assert_eq!(goal1, list1);
+        assert_eq!(goal2, list2);
+    }
+}
