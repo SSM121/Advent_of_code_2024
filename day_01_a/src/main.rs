@@ -1,6 +1,6 @@
 use adventio;
 fn main() {
-    let (mut list1, mut list2) = adventio::read_inputs("../input.txt".to_string());
+    let (mut list1, mut list2) = adventio::read_inputs_day_01("../input.txt".to_string());
     list1.sort();
     list2.sort();
     let distances = get_distances(list1, list2);
